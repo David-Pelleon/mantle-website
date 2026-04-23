@@ -1,0 +1,160 @@
+.headerTitle {
+  font-size: 28px;
+  margin-bottom: var(--space-md);
+}
+
+.steps {
+  list-style: decimal;
+  padding-left: 20px;
+  margin-top: var(--space-md);
+  max-width: 600px;
+}
+
+.steps li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.stepsSub {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.stepsSub li::before {
+  content: "— ";
+  color: var(--color-concrete);
+}
+
+.methodList {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  margin-bottom: var(--space-sm);
+  max-width: 600px;
+}
+
+.methodList li {
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.methodList li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-concrete);
+}
+
+.emphasis {
+  font-weight: var(--weight-medium);
+  margin-top: var(--space-md);
+}
+
+.closing {
+  margin-top: var(--space-md);
+  color: var(--color-concrete);
+  font-size: 14px;
+}
+
+.sourceEntry {
+  border-left: 2px solid var(--color-charcoal);
+  background: var(--color-pure-white);
+  padding: 24px 32px;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.sourceEntry h3 {
+  margin-bottom: 8px;
+}
+
+.sourceEntry p {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: none;
+}
+
+.sourceMeta {
+  font-size: 12px !important;
+  color: var(--color-concrete);
+  margin-top: 4px;
+}
+
+.confidenceEntry {
+  border-left: 2px solid var(--color-charcoal);
+  background: var(--color-pure-white);
+  padding: 24px 32px;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.confidenceHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.confidenceDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.confidenceHigh {
+  background: var(--color-verified-green);
+}
+
+.confidenceModerate {
+  background: var(--color-steel-blue);
+}
+
+.confidenceLow {
+  background: var(--color-caution-amber);
+}
+
+.confidenceLabelHigh {
+  font-weight: var(--weight-bold);
+  font-size: 14px;
+  color: var(--color-verified-green);
+}
+
+.confidenceLabelModerate {
+  font-weight: var(--weight-bold);
+  font-size: 14px;
+  color: var(--color-steel-blue);
+}
+
+.confidenceLabelLow {
+  font-weight: var(--weight-bold);
+  font-size: 14px;
+  color: var(--color-caution-amber);
+}
+
+.confidenceEntry p {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: none;
+}
+
+.sourceEntry h3,
+.confidenceEntry h3 {
+  margin-top: var(--space-md);
+  margin-bottom: 8px;
+}
+
+.sectionContent h3 {
+  margin-top: var(--space-md);
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .sourceEntry,
+  .confidenceEntry {
+    padding: 16px 20px;
+  }
+}

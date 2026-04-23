@@ -1,65 +1,65 @@
-import Image from "next/image";
+import Walkthrough from "@/components/Walkthrough";
+import WaitlistForm from "@/components/WaitlistForm";
+import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <section className={styles.hero}>
+        <h1>
+          Assembly research takes hours.
+          <br />
+          Every answer should take seconds.
+        </h1>
+        <p>
+          You cross-reference UL, GA-600, IBC, and manufacturer data to answer
+          one assembly question. Mantle does it in a single query — with full
+          citations from the sources you already trust.
+        </p>
+      </section>
+
+      <section className={styles.promise}>
+        <h2>
+          Every claim cited. Every source linked. Every limitation stated.
+        </h2>
+        <p>
+          Mantle cross-references tested assembly data from UL Product iQ,
+          GA-600, NRC Canada, IBC, IECC, ASHRAE, and DOE — and returns cited,
+          multi-variable answers structured for professional use.
+        </p>
+        <p>
+          Not a chatbot. Not a search engine. A research tool built on the same
+          evidence base you already rely on.
+        </p>
+      </section>
+
+      <Walkthrough
+        intro="Here's the kind of question you'd ask. Here's the kind of answer you'd get."
+        annotation="This answer took 8 seconds. The manual research takes 45 minutes across 4 sources."
+      />
+
+      <section className={styles.sources}>
+        <h2>Where the data comes from</h2>
+        <p>
+          Mantle retrieves from a structured, verified database — not a
+          general-purpose language model. Every answer traces to one of these
+          sources:
+        </p>
+        <p className={styles.sourcesList}>
+          UL Product iQ · GA-600 · IBC · IECC · NRC Canada · ASHRAE · DOE BCL
+        </p>
+        <p>
+          We don&apos;t generate assembly data. We retrieve it, cross-reference
+          it, and cite it. If a source can&apos;t be linked, the claim is
+          labeled as estimate or inference.
+        </p>
+        <Link href="/methodology" className={styles.methodologyLink}>
+          Methodology · How Mantle cross-references data across sources
+        </Link>
+      </section>
+
+      <WaitlistForm />
+    </>
   );
 }

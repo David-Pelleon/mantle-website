@@ -1,0 +1,168 @@
+.walkthroughSection {
+  margin-bottom: var(--space-3xl);
+}
+
+.intro {
+  font-size: 15px;
+  color: var(--color-concrete);
+  margin-bottom: var(--space-md);
+}
+
+.question {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-medium);
+  font-size: 18px;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-sm);
+}
+
+.walkthrough {
+  border-left: 2px solid var(--color-charcoal);
+  background: var(--color-pure-white);
+  padding: 40px;
+  margin-bottom: var(--space-sm);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-sm);
+}
+
+.id {
+  font-weight: var(--weight-bold);
+  font-size: 16px;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.description {
+  font-size: 14px;
+  display: block;
+  margin-top: 2px;
+}
+
+.confidence {
+  font-size: 12px;
+  color: var(--color-verified-green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.confidenceDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.high {
+  background: var(--color-verified-green);
+}
+
+.grid {
+  margin-bottom: var(--space-md);
+}
+
+.gridHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr 1.3fr 1fr;
+  gap: 16px;
+  font-weight: var(--weight-medium);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.gridData {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr 1.3fr 1fr;
+  gap: 16px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.narrative {
+  margin-bottom: var(--space-sm);
+}
+
+.narrative p {
+  font-size: 14px;
+  line-height: 1.45;
+  max-width: none;
+}
+
+.citation {
+  color: var(--color-steel-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.citation:hover {
+  text-decoration: underline;
+}
+
+.dataGap {
+  color: var(--color-charcoal);
+}
+
+.sources {
+  margin-bottom: var(--space-sm);
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-concrete);
+  margin-bottom: var(--space-sm);
+}
+
+.panelLabel {
+  font-size: 12px;
+  color: var(--color-concrete);
+  font-weight: var(--weight-regular);
+  margin-bottom: 8px;
+}
+
+.source {
+  font-size: 12px;
+  color: var(--color-concrete);
+  line-height: 1.5;
+  max-width: none;
+}
+
+.source + .source {
+  margin-top: 4px;
+}
+
+.limitationText {
+  font-size: 12px;
+  color: var(--color-concrete);
+  line-height: 1.5;
+  max-width: none;
+}
+
+.annotation {
+  font-size: 13px;
+  color: var(--color-concrete);
+}
+
+@media (max-width: 768px) {
+  .walkthrough {
+    padding: 24px;
+  }
+
+  .gridHeader,
+  .gridData {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

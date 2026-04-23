@@ -1,0 +1,28 @@
+.hero {
+  margin-bottom: var(--space-3xl);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-md);
+}
+
+.promise {
+  margin-bottom: var(--space-3xl);
+}
+
+.sourcesList {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-medium);
+  font-size: 16px;
+  color: var(--color-charcoal);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.methodologyLink {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--color-steel-blue);
+  text-decoration: underline;
+  margin-top: var(--space-sm);
+}

@@ -1,0 +1,19 @@
+.pageTitle {
+  font-size: 28px;
+  margin-bottom: var(--space-md);
+}
+
+.sourcesList {
+  font-weight: var(--weight-medium);
+  font-size: 16px;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.methodologyLink {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--color-steel-blue);
+  text-decoration: underline;
+  margin-top: var(--space-sm);
+}
