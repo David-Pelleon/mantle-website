@@ -13,7 +13,7 @@ export async function POST(request: Request) {
 
   const { error } = await getSupabase()
     .from("contact_submissions")
-    .insert({ name, email, message });
+    .insert({ name, email, submission: message });
 
   if (error) {
     console.error("Supabase insert error:", error);
