@@ -25,7 +25,6 @@ export default function WaitlistForm({
   const [question, setQuestion] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [emailError, setEmailError] = useState("");
-  const [errorDetail, setErrorDetail] = useState("");
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -48,12 +47,9 @@ export default function WaitlistForm({
       if (res.ok) {
         setStatus("success");
       } else {
-        const data = await res.json().catch(() => null);
-        setErrorDetail(data?.details || `HTTP ${res.status}`);
         setStatus("error");
       }
-    } catch (err) {
-      setErrorDetail(err instanceof Error ? err.message : "Network error");
+    } catch {
       setStatus("error");
     }
   }
@@ -120,7 +116,6 @@ export default function WaitlistForm({
         {status === "error" && (
           <p className={styles.error}>
             Something went wrong. Please try again.
-            {errorDetail && <><br />{errorDetail}</>}
           </p>
         )}
       </form>
